@@ -3,14 +3,11 @@ package com.mc.dagger.ui.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.mc.dagger.App;
 import com.mc.dagger.R;
 import com.mc.dagger.data.remote.model.book.Book;
 import com.mc.dagger.ui.AppComponent;
 import com.mc.dagger.ui.BaseActivity;
-import com.mc.dagger.ui.contract.MainContract;
 import com.mc.dagger.ui.module.MainModule;
-import com.mc.dagger.ui.presenter.MainPresenter;
 
 import java.util.List;
 
@@ -33,13 +30,13 @@ public class MainActivity extends BaseActivity implements MainContract.MainView{
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
-        App.get(this).getAppComponent().plus(new MainModule(this))
-                .inject(this);
+        appComponent.plus(new MainModule(this)).inject(this);
     }
 
     @Override
     public void updateName(String name) {
-        tvMain.setText(name);
+        tvMain.append("\n");
+        tvMain.append(name);
     }
 
     @Override

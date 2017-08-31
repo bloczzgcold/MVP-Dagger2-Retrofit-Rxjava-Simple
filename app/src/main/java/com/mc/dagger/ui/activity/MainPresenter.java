@@ -1,9 +1,9 @@
-package com.mc.dagger.ui.presenter;
+package com.mc.dagger.ui.activity;
 
 import com.mc.dagger.data.remote.ApiManager;
 import com.mc.dagger.data.remote.SimpleCallback;
 import com.mc.dagger.data.remote.model.book.Book;
-import com.mc.dagger.ui.contract.MainContract;
+import com.mc.dagger.ui.activity.MainContract;
 
 import java.util.List;
 

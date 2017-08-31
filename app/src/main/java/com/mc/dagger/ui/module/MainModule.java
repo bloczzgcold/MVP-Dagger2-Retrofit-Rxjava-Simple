@@ -1,8 +1,8 @@
 package com.mc.dagger.ui.module;
 
 import com.mc.dagger.data.remote.ApiManager;
-import com.mc.dagger.ui.contract.MainContract;
-import com.mc.dagger.ui.presenter.MainPresenter;
+import com.mc.dagger.ui.activity.MainContract;
+import com.mc.dagger.ui.activity.MainPresenter;
 
 import dagger.Module;
 import dagger.Provides;

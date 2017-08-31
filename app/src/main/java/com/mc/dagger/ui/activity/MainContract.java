@@ -1,4 +1,4 @@
-package com.mc.dagger.ui.contract;
+package com.mc.dagger.ui.activity;
 
 import com.mc.dagger.data.remote.model.book.Book;
 
