@@ -24,14 +24,16 @@ public class ExceptionSubscriber<T> extends Subscriber<T> {
     @Override
     public void onStart() {
         super.onStart();
-        if(simpleCallback != null)
+        if(simpleCallback != null){
             simpleCallback.onStart();
+        }
     }
 
     @Override
     public void onCompleted() {
-        if(simpleCallback != null)
+        if(simpleCallback != null){
             simpleCallback.onComplete();
+        }
     }
 
     @Override
@@ -44,13 +46,15 @@ public class ExceptionSubscriber<T> extends Subscriber<T> {
         } else {
             Toast.makeText(application, "error:" + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-        if(simpleCallback != null)
+        if(simpleCallback != null){
             simpleCallback.onComplete();
+        }
     }
 
     @Override
     public void onNext(T t) {
-        if(simpleCallback != null)
+        if(simpleCallback != null){
             simpleCallback.onNext(t);
+        }
     }
 }
